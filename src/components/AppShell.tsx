@@ -39,8 +39,17 @@ const moreItems: Array<{ href: string; label: string; hint: string; icon: React.
 
 const moreHrefs = new Set(moreItems.map((item) => item.href));
 
+/**
+ * next.config sets `trailingSlash: true` (the Tauri asset protocol needs it), so routes
+ * resolve as "/transactions/" while the nav hrefs are written bare. Normalise before
+ * comparing, or nothing but "/" ever matches and no nav item highlights.
+ */
+function normalizePath(path: string): string {
+  return path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+}
+
 export default function AppShell({ children }: PropsWithChildren) {
-  const pathname = usePathname();
+  const pathname = normalizePath(usePathname());
   const openTransactionModal = useUiStore((s) => s.openTransactionModal);
   const [moreOpen, setMoreOpen] = useState(false);
 
