@@ -1,0 +1,14 @@
+[[permission]]
+identifier = "allow-pick-and-read-backup"
+description = "Allow picking and reading a LEDGER backup JSON"
+commands.allow = ["pick_and_read_backup"]
+
+[[permission]]
+identifier = "allow-save-text-file"
+description = "Allow saving text backup/export files"
+commands.allow = ["save_text_file"]
+
+[[permission]]
+identifier = "allow-save-bytes-file"
+description = "Allow saving binary export files such as PDF"
+commands.allow = ["save_bytes_file"]

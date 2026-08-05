@@ -1,0 +1,12 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Only what the frontend actually calls: the three backup/export commands. All file access goes through those Rust commands, which are gated by a native file dialog, so the JS fs and dialog APIs are not exposed.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "allow-pick-and-read-backup",
+    "allow-save-text-file",
+    "allow-save-bytes-file"
+  ]
+}
