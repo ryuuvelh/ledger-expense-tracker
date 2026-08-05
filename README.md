@@ -5,6 +5,26 @@ all stored in your browser's IndexedDB, on your machine. No account, no server, 
 
 Runs as a desktop app via [Tauri](https://tauri.app), or in a browser during development.
 
+## Download
+
+Grab the latest `.dmg` from [Releases](../../releases). Universal build — works on both
+Apple Silicon and Intel Macs. macOS only for now.
+
+Open the DMG and drag LEDGER into Applications.
+
+### "LEDGER is damaged and can't be opened"
+
+The app is **not signed with an Apple Developer certificate and is not notarised**, so macOS
+quarantines it on download and shows that message. The app is fine; macOS simply cannot verify
+who built it. To run it anyway, clear the quarantine flag:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/LEDGER.app
+```
+
+If you would rather not run that, build it yourself from source — see below. Only do either of
+these because you trust the source; that warning exists for good reason.
+
 ## Features
 
 - **Wallets** — cash, bank accounts, and credit cards, with per-card limit and available-credit tracking
