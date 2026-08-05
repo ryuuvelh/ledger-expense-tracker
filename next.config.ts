@@ -11,8 +11,11 @@ const nextConfig: NextConfig = {
   },
   // Helps the Tauri asset protocol resolve nested routes.
   trailingSlash: true,
-  // Required so assets resolve correctly during `tauri dev`.
-  assetPrefix: isProd ? undefined : `http://${internalHost}:3000`,
+  // Only needed when the webview loads from a different origin than the dev server
+  // (Tauri mobile / remote dev, where TAURI_DEV_HOST is set). Applying it
+  // unconditionally breaks any remote dev environment — Codespaces, a devcontainer,
+  // a VM — because the browser would fetch every chunk from its own localhost.
+  assetPrefix: !isProd && process.env.TAURI_DEV_HOST ? `http://${internalHost}:3000` : undefined,
 };
 
 export default nextConfig;
