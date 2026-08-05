@@ -39,8 +39,14 @@ Amounts are stored as integer paise and formatted as INR, so there is no floatin
 ## Getting started
 
 ```bash
-npm install
+npm ci
 ```
+
+Use `npm ci` rather than `npm install`. Tailwind v4 ships its native binding as a
+platform-specific optional dependency, and `npm install` skips optional packages silently
+if one fails to fetch — leaving a build that dies with `Cannot find native binding`.
+`npm ci` installs the lockfile exactly. If you hit that error anyway,
+`rm -rf node_modules && npm ci` fixes it.
 
 Development in the browser:
 
