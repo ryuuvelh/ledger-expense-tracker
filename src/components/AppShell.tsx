@@ -14,6 +14,7 @@ import {
   Wallet,
   X,
 } from "lucide-react";
+import LedgerMark from "@/components/LedgerMark";
 import ThemeToggle from "@/components/ThemeToggle";
 import TransactionFormModal from "@/components/TransactionFormModal";
 import { useUiStore } from "@/store/uiStore";
@@ -80,9 +81,7 @@ export default function AppShell({ children }: PropsWithChildren) {
       <div className="relative flex min-h-screen">
         <aside className="hidden w-56 shrink-0 flex-col border-r border-sidebar-border bg-sidebar px-3 py-5 lg:flex">
           <div className="mb-8 flex items-center gap-2.5 px-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded bg-primary">
-              <Wallet size={14} className="text-primary-foreground" />
-            </div>
+            <LedgerMark size={28} />
             <div>
               <div className="font-display text-sm font-semibold tracking-tight text-sidebar-foreground">LEDGER</div>
             </div>
@@ -138,9 +137,9 @@ export default function AppShell({ children }: PropsWithChildren) {
         <div className="flex min-w-0 flex-1 flex-col">
           <header className="flex items-center justify-between gap-3 border-b border-border px-4 py-3 sm:px-6">
             <div className="flex items-center gap-2.5">
-              <div className="flex h-7 w-7 items-center justify-center rounded bg-primary lg:hidden">
-                <Wallet size={14} className="text-primary-foreground" />
-              </div>
+              <span className="lg:hidden">
+                <LedgerMark size={28} />
+              </span>
               <span className="font-display text-sm font-semibold tracking-tight lg:hidden">LEDGER</span>
               <div className="hidden text-xs font-mono text-muted-foreground lg:block">
                 {new Date().toLocaleDateString("en-IN", {
