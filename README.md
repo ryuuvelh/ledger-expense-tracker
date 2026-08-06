@@ -7,7 +7,7 @@ Runs as a desktop app via [Tauri](https://tauri.app), or in a browser during dev
 
 ## Download
 
-**[Download LEDGER 1.0.1 (universal `.dmg`)](https://github.com/ryuuvelh/ledger-expense-tracker/releases/download/v1.0.1/LEDGER_1.0.1_universal.dmg)**
+**[Download LEDGER (universal `.dmg`)](https://github.com/ryuuvelh/ledger-expense-tracker/releases/latest/download/LEDGER_universal.dmg)**
 · [all releases](../../releases)
 
 Universal build — works on both Apple Silicon and Intel Macs. macOS only for now.
@@ -68,6 +68,17 @@ Build the desktop app (output under `src-tauri/target/release/bundle/`):
 ```bash
 npm run tauri:build
 ```
+
+Build the release artifact — a universal (Apple Silicon + Intel) DMG, copied out as
+`LEDGER_universal.dmg`:
+
+```bash
+npm run dmg
+```
+
+Upload that file, under exactly that name, as the release asset. The download link above
+is `releases/latest/download/LEDGER_universal.dmg`, which GitHub resolves to the newest
+release — so keeping the filename free of a version number means the link never goes stale.
 
 ## Checks
 

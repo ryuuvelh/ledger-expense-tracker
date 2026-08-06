@@ -49,3 +49,6 @@ next-env.d.ts
 
 # local agent tooling
 .claude/
+
+# release artifact (upload to GitHub Releases, never commit)
+/LEDGER_universal.dmg

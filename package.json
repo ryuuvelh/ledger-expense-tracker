@@ -10,7 +10,8 @@
     "test": "tsx scripts/verify_finance.ts",
     "tauri": "tauri",
     "tauri:dev": "tauri dev",
-    "tauri:build": "tauri build"
+    "tauri:build": "tauri build",
+    "dmg": "npm run tauri:build -- --target universal-apple-darwin && cp src-tauri/target/universal-apple-darwin/release/bundle/dmg/LEDGER_*_universal.dmg ./LEDGER_universal.dmg && echo \"-> ./LEDGER_universal.dmg\""
   },
   "dependencies": {
     "@hookform/resolvers": "^5.5.7",
