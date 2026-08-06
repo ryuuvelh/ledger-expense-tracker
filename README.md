@@ -7,10 +7,13 @@ Runs as a desktop app via [Tauri](https://tauri.app), or in a browser during dev
 
 ## Download
 
-Grab the latest `.dmg` from [Releases](../../releases). Universal build — works on both
-Apple Silicon and Intel Macs. macOS only for now.
+**[Download LEDGER 1.0.1 (universal `.dmg`)](https://github.com/ryuuvelh/ledger-expense-tracker/releases/download/v1.0.1/LEDGER_1.0.1_universal.dmg)**
+· [all releases](../../releases)
 
-Open the DMG and drag LEDGER into Applications.
+Universal build — works on both Apple Silicon and Intel Macs. macOS only for now.
+
+Open the DMG and drag LEDGER into Applications. Updating over an existing install keeps
+your data: it lives outside the app bundle.
 
 ### "LEDGER is damaged and can't be opened"
 
