@@ -1,7 +1,20 @@
-# LEDGER
+<p align="center">
+  <img src=".github/logo.png" width="128" height="128" alt="LEDGER" />
+</p>
 
-A local-first personal finance tracker. Wallets, transactions, bills, and reports —
-all stored in your browser's IndexedDB, on your machine. No account, no server, no telemetry.
+<h1 align="center">LEDGER</h1>
+
+<p align="center">
+  A local-first personal finance tracker.<br />
+  Wallets, transactions, bills, and reports — stored entirely on your own machine.<br />
+  <strong>No account, no server, no telemetry.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ryuuvelh/ledger-expense-tracker/releases/latest/download/LEDGER_universal.dmg"><img src="https://img.shields.io/badge/download-macOS%20universal%20.dmg-FF9111?style=flat-square" alt="Download for macOS" /></a>
+  <a href="https://github.com/ryuuvelh/ledger-expense-tracker/releases/latest"><img src="https://img.shields.io/github/v/release/ryuuvelh/ledger-expense-tracker?style=flat-square&color=CB3100" alt="Latest release" /></a>
+  <img src="https://img.shields.io/badge/license-MIT-64748b?style=flat-square" alt="MIT licence" />
+</p>
 
 Runs as a desktop app via [Tauri](https://tauri.app), or in a browser during development.
 
